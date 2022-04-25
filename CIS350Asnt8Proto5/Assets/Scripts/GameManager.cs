@@ -14,6 +14,17 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public bool isGameAvtive;
     public Button restartButton;
+    public GameObject titleScreen;
+
+    public void StartGame(int difficulty)
+    {
+        spawnRate /= difficulty;
+        isGameAvtive = true;
+        StartCoroutine(SpawnTarget());
+        score = 0;
+        UpdateScore(0);
+        titleScreen.gameObject.SetActive(false);
+    }
     
     public void RestartGame()
     {
@@ -22,10 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        isGameAvtive = true;
-        StartCoroutine(SpawnTarget());
-        score = 0;
-        UpdateScore(0);
+
     }
 
     public void GameOver()
