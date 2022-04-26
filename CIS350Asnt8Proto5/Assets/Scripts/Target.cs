@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Zach Daly
+ * Prototype 5
+ * Allows the items to be destroyed and effect the score
+ */
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
